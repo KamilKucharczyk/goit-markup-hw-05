@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 4 - Main Page</title>
+    <title>Homework 5 - Main Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -28,7 +28,11 @@
         >
         <nav class="navigation">
           <ul class="navigation-list">
-            <li><a href="index.html" class="navigation-link">Agencja</a></li>
+            <li>
+              <div class="active-page">
+                <a href="index.html" class="navigation-link">Agencja</a>
+              </div>
+            </li>
             <li>
               <a href="portfolio.html" class="navigation-link">Portfolio</a>
             </li>
@@ -60,7 +64,14 @@
           <h1 class="primary-header primary-header-set">
             EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
           </h1>
-          <button type="button" class="button-properties">Zamów usługe</button>
+          <button type="button" class="button-properties" data-modal-open>
+            Zamów usługe
+          </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="btn-close" data-modal-close>X</button>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -125,28 +136,37 @@
           <h2 class="what-we-do">Czym się zajmujemy</h2>
           <ul class="what-we-do-list">
             <li>
-              <img
-                src="./images/img1.jpg"
-                alt="Pisanie kodu"
-                width="370"
-                height="294"
-              />
+              <div class="label-container">
+                <img
+                  src="./images/img1.jpg"
+                  alt="Pisanie kodu"
+                  width="370"
+                  height="294"
+                />
+                <p class="label">Aplikacje komputerowe</p>
+              </div>
             </li>
             <li>
-              <img
-                src="./images/img2.jpg"
-                alt="Aplikacje mobilne"
-                width="370"
-                height="294"
-              />
+              <div class="label-container">
+                <img
+                  src="./images/img2.jpg"
+                  alt="Aplikacje mobilne"
+                  width="370"
+                  height="294"
+                />
+                <p class="label">Aplikacje mobilne</p>
+              </div>
             </li>
             <li>
-              <img
-                src="./images/img3.jpg"
-                alt="Paleta kolorów"
-                width="370"
-                height="294"
-              />
+              <div class="label-container">
+                <img
+                  src="./images/img3.jpg"
+                  alt="Paleta kolorów"
+                  width="370"
+                  height="294"
+                />
+                <p class="label">Rozwiązania graficzne</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -442,5 +462,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/modal.js"></script>
   </body>
 </html>
